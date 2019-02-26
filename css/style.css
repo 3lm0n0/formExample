@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+
+/*fondo del cuerpo del sitio*/
+body {
+  background: url("https://static1.squarespace.com/static/54dfc67fe4b0406fb3d5612a/t/5a3945319140b765208297a8/1513702705962/rice-paper.PNG") white;
+}
+/*div que contiene al formulario*/
+.formContainer {
+  color: #777;
+  width: 80%;
+  margin: auto;
+  padding: 4%;
+  font-family: 'Source Sans Pro','Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/*titulo del formulario*/
+.formTitle {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+/*subtitulo del formulario*/
+.formSubTitle {
+  color: HotPink;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 50px;
+}
+/*div que contienen cada uno de los campos del formulario*/
+.field {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+/*el ultimo hijo del div field*/
+.field:last-child {
+  margin-top: 60px;
+  height: 80px;
+}
+/*las etiquetas de los campos*/
+label {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  top: -25px;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+/*los campos donde se ingresa la data*/
+input:valid, textarea:valid {
+  color: DodgerBlue;
+}
+input:focus, textarea:focus {
+  color: HotPink;
+}
+input:invalid:not(:focus):not(:placeholder-shown) {
+  color: Red;
+}
+input[type="password"]:focus {
+  white-space: nowrap;
+  font-weight: 500;
+  text-transform: none;
+  bottom: 115%;
+  left: 100%;
+}
+input.transform {
+  transition: all .3s ease;
+}
+
+.input {
+  font-size: 24px;
+  box-sizing: border-box;
+  margin: 20px 50px 20px 0;
+  width: 60%;
+  padding: 5px 10px;
+
+}
+
+input, textarea {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 300;
+  color: #333;
+  height: 45px;
+}
+input:not(:hover):not(:focus):not(:valid), textarea:not(:hover):not(:focus):not(:valid) {
+  background: url("https://static1.squarespace.com/static/54dfc67fe4b0406fb3d5612a/t/5a3945319140b765208297a8/1513702705962/rice-paper.PNG") #EEE;
+}
+input:hover:not(:focus), textarea:hover:not(:focus) {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  top: -5px;
+  bottom: 5px;
+}
+/*aqui le digo que se ensanche al 100% cuando hacen foco, pasa del 60% al 100% de ancho*/
+.transform:focus {
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
+  border: 3px solid HotPink;
+  top: -2px;
+  bottom: 2px;
+  width: 100%;
+}
+input:valid:not(:focus), textarea:valid:not(:focus) {
+  left: 40%;
+  background: url("https://static1.squarespace.com/static/54dfc67fe4b0406fb3d5612a/t/5a3945319140b765208297a8/1513702705962/rice-paper.PNG") white;
+  border: 3px solid DodgerBlue;
+  color: DodgerBlue;
+}
+input:invalid:not(:focus):not(:placeholder-shown), textarea:invalid:not(:focus):not(:placeholder-shown) {
+  color: Red;
+  border: 3px solid Red;
+}
+
+.select {
+  box-sizing: border-box;
+  margin: 20px 50px 20px 0;
+  width: 60%;
+  padding: 5px 10px;
+}
+
+/*campo de texto*/
+textarea.input {
+  min-height: 70px;
+  max-width: 60%;
+  min-width: 60%;
+}
+textarea.input:focus {
+  min-width: 100%;
+  transition: all .3s ease;
+}
+/*boton para enviar los datos del formulario*/
+#submit {
+  background-color: HotPink;
+  height: 45px;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  letter-spacing: .05em;
+  left: 40%;
+  margin-top: 20px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.25);
+}
+#submit:hover {
+  margin-top: 10px;
+  background-color: limegreen;
+}
+
+/*media queries*/
+@media (min-width: 1200px) {
+  .select {
+    font-size: 20px;
+    background: url("https://static1.squarespace.com/static/54dfc67fe4b0406fb3d5612a/t/5a3945319140b765208297a8/1513702705962/rice-paper.PNG") #EEE;
+  }
+}

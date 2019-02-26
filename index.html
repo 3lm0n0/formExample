@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+      <meta charset="UTF-8">
+      <title>Dynamic Paper Form (CSS Only)</title>
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <div class="formContainer">
+          <form>
+              <div class="formTitle">Formulario</div>
+              <div class="formSubTitle">Usuario</div>
+              <div class="field">
+                  <label for="username">Nombre de usuario</label><br />
+                  <input type="text" class="input transform" id="username" name="username" placeholder=" " required />
+              </div>
+              <div class="field">
+                  <label for="password">Contraseña (hacer hover para ver titulo)</label><br />
+                  <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" class="input transform" id="password" name="password" placeholder=" " title="La contraseña debe contener al menos 6 caracteres, por lo menos un número y por lo menos una mayúscula." required />
+              </div>
+              <br />
+              <div class="formSubTitle">Info general</div>
+              <div class="field">
+                  <label for="select">Que planea hacer esta noche?</label><br />
+                  <select class="select transform">
+                      <option value="">Seleccionar</option>
+                      <option value="volvo">Conquistar el mundo</option>
+                      <option value="saab">Conquistar parcialmente el mundo</option>
+                      <option value="mercedes">Conquistar sólo 1 continenete</option>
+                      <option value="audi">Ninguna de las anteriores</option>
+                  </select>
+              </div>
+              <br /><br />
+              <div class="field">
+                  <label for="phone">Número de teléfono</label><br />
+                  <input pattern="[0-9]{6,}" type="phone" class="input transform" id="phone" name="phone" placeholder=" " required />
+              </div>
+              <div class="field">
+                  <label for="email">Email</label><br />
+                  <input type="email" class="input transform" id="email" name="email" placeholder=" " required />
+              </div>
+              <div class="field">
+                  <label for="twitter">Twitter</label><br />
+                  <input type="text" class="input transform" id="twitter" name="twitter" placeholder="@" required />
+              </div>
+              <div class="field">
+                  <label for="title_1">
+                    Esto me aburre
+                  </label>
+                  <input type="radio" id="title_1" name="title" value="1">
+                  <label for="title_2">
+                          Estoy aprendiendo
+                  </label>
+                  <input type="radio" id="title_2" name="title" value="2">
+              </div>
+              <div class="field">
+                  <label for="checkbox">Acepto los términos y condiciones</label><br />
+                  <input id="agree" type="checkbox" required>
+              </div>
+              <div class="field">
+                  <label for="message">Comentario</label><br />
+                  <textarea type="textarea" class="input transform" id="message" name="message" placeholder=" " required></textarea>
+              </div>
+
+              <div class="field">
+                  <button class="input" id="submit">Enviar</button>
+              </div>
+          </form>
+      </div>
+  </body>
+</html>
